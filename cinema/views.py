@@ -11,14 +11,16 @@ from cinema.serializers import (GenreSerializer,
                                 MovieSessionListSerializer,
                                 MovieSessionDetailSerializer,
                                 MovieListSerializer,
-                                MovieDetailSerializer, MovieSerializer, MovieSessionSerializer)
+                                MovieDetailSerializer,
+                                MovieSerializer,
+                                MovieSessionSerializer)
 
 
 class GenreViewSet(viewsets.ModelViewSet):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
 
-    read_only_fields = ('id',)
+    read_only_fields = ("id",)
 
 
 class MovieViewSet(viewsets.ModelViewSet):
